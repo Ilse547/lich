@@ -1,9 +1,11 @@
 const express = require('express')
+const { logger } = require('./middleware/logger');
+
+
 const app = express()
 const port = 3000
 
 
-const { logger } = require('./middleware/logger');
 
 app.use(logger)
 
@@ -12,5 +14,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`example app: http://localhost:${port}`)
+    console.log(`server working: http://localhost:${port}`)
 })

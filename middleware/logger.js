@@ -9,3 +9,5 @@ function logger(req, res, next) {
   console.log(`[${now}] ${ip} ${req.method} ${req.originalUrl}`);
   next();
 }
+
+module.exports = { logger };

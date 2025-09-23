@@ -1,5 +1,8 @@
 <html>
     <head>
+        <title>Chat</title>
+        <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+
         <link rel="stylesheet" href="./style/style.css">
     </head>
     <body>
@@ -13,13 +16,12 @@
         </nav>
         <main class="chat">
             <h1>Chat</h1>
-                <section id="messages" class="chat-messages">
-
-                    
-                </section>
-
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
 
 
         </main>
+        <script src="./js/chat.js"></script>
     </body>
 </html>

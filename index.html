@@ -1,3 +1,168 @@
+<html>
+    <head>
+        <title>Thatdown</title>
+        <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="icon" href="img/whatb.png" type="image/x-icon">
+    </head>
+    <body>
+        <style>
+            body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: var(--sidebar-bg, #2D3748);
+  color: var(--sidebar-text, #E2E8F0);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar a{
+  margin: 5px;
+  margin-left: 0;
+  border: #1f2937;
+  border-color: #3b82f6;
+}
+
+.nav-divider{
+  width: 200px;
+}
+
+#username_input{
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  margin-bottom: 5px;
+}
+#set-UN-btn{
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  margin-bottom: 5px;
+  size: 15px;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: var(--main-bg, #5474ff);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat h1 {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+.inputbar {
+    padding: 1rem;
+    background-color: white;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#message-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+#send-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#send-btn:hover {
+    background-color: #2563eb;
+}
+
+.message {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.message strong {
+    color: #1f2937;
+}
+
+.message small {
+    color: #6b7280;
+    margin-left: 0.5rem;
+}
+
+        </style>
+        <nav class="sidebar">
+            <div class="username-section">
+                <h3>Your Name</h3>
+                <div class="username-input-group">
+                    <input type="text" id="username-input" placeholder="Enter your name" maxlength="20">
+                    <button id="set-username-btn">Set</button>
+                </div>
+                <div id="current-user" class="current-user hidden">
+                    <span>👤</span>
+                    <span id="current-username">Anonymous</span>
+                    <button id="edit-username-btn">Edit</button>
+                </div>
+            </div>
+            <hr class="nav-divider">
+            <a>Chat</a>
+            <a>Chat</a>
+            <a>Chat</a>
+            <a>Chat</a>
+        </nav>
+        
+        <div class="chat-container">
+            <main class="chat">
+                <h1>H1 chat ?</h1>
+                <div id="messages"></div>
+            </main>
+            
+            <div class="inputbar">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button> 
+            </div>
+        </div>
+
+        <script>
 
 
 
@@ -118,3 +283,7 @@ function displayMessage(message) {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', initializeUsername);
+
+        </script>
+    </body>
+</html>
